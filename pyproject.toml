@@ -1,0 +1,52 @@
+# Ruff + mypy for local dev (install: pip install -r requirements-dev.txt).
+# Not required to run training; pytest does not depend on these tools.
+
+[project]
+name = "assignment2-super-ttt"
+version = "0.0.0"
+description = "Super Tic-Tac-Toe RL assignment (local source tree)"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+exclude = [
+  "results",
+  "checkpoints",
+  ".git",
+  ".venv",
+]
+
+[tool.ruff.lint]
+# E/F: pycodestyle + pyflakes. B: bugbear. Omit I/UP to avoid noisy import/style churn.
+select = ["E", "F", "B"]
+ignore = [
+  "E501",   # line length (docstrings / URLs)
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Intentional: adjust sys.path / env before importing Ray or project modules.
+"src/train.py" = ["E402"]
+"src/augment_learner.py" = ["E402"]
+"tests/test_augment_learner.py" = ["E402"]
+
+# Type-check game/core modules only. RLlib-heavy files lack accurate stubs; full `src`
+# reports dozens of false positives. Expand this list if you add annotations there.
+[tool.mypy]
+python_version = "3.10"
+mypy_path = "src"
+explicit_package_bases = true
+ignore_missing_imports = true
+warn_unreachable = true
+follow_imports = "silent"
+check_untyped_defs = false
+disallow_untyped_defs = false
+files = [
+  "src/board.py",
+  "src/rules.py",
+  "src/stochastic.py",
+  "src/augment.py",
+  "src/rllib_fs_path.py",
+  "src/network.py",
+]
