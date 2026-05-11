@@ -1,0 +1,4 @@
+# Reproducible installs: after `pip install -r requirements.txt` in a clean venv, run:
+#   pip freeze > requirements-lock.txt
+# Commit `requirements-lock.txt` only if the course asks for exact pins.
+# Typical pins vary by OS (torch MPS vs CUDA); `run_meta.json` records what you trained with.
