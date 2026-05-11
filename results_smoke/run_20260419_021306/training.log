@@ -1,0 +1,24 @@
+# Super Tic-Tac-Toe PPO training log
+# run_dir=/Users/shw/Library/Mobile Documents/com~apple~CloudDocs/MAFM/强化学习/assignment2new/results_smoke/run_20260419_021306
+
+Device: mps (MPS=True)
+FAST mode: smaller CNN, batch=2048
+Network: 221,703 parameters
+Training: 2 iterations, batch=2048
+Checkpoint every 2 iter -> /Users/shw/Library/Mobile Documents/com~apple~CloudDocs/MAFM/强化学习/assignment2new/checkpoints_smoke/
+Iter    1/2 | reward=-0.021 | win_rate=0.280 | lr=2.0e-04 | ent=0.030 | ploss=-0.0276 | vloss=0.2132 | clip=0.293 | kl=0.0163 | gnorm=3.411 | ev=-0.033 | shaping=1.00 | snaps=0 | ff=0.000 | ff_inj=0.011 | blk=0.014 | ep_len=20.6 | 2 stp/s | 1182.1s | ETA 0.3h
+Iter    2/2 | reward=-0.020 | win_rate=0.280 | lr=2.0e-04 | ent=0.030 | ploss=-0.0278 | vloss=0.1859 | clip=0.188 | kl=0.0157 | gnorm=4.391 | ev=0.143 | shaping=1.00 | snaps=0 | ff=0.000 | ff_inj=0.013 | blk=0.012 | ep_len=21.0 | 2 stp/s | 1286.9s | ETA 0.0h
+  [eval] vs snapshot: win=0.780 draw=0.000
+  [eval] vs random:   win=0.860
+  [eval] heur:        first=0.040  second=0.020
+  [eval] line_rusher: first=0.160  second=0.160
+  [eval] row_rusher:  first=0.060  second=0.000
+  [eval] col_rusher:  first=0.020  second=0.040
+  [eval] greedy_tactical: first=0.000  second=0.000
+  [eval] lookahead_scripted: first=0.000  second=0.083
+  [eval] random_open: vs_heur=0.000  vs_col=0.020  vs_row=0.020
+  [eval] recovery_vs_heur=0.020 (baseline heur_first=0.040)
+  [eval] block_rate_vs_line=0.000
+  Checkpoint: /Users/shw/Library/Mobile Documents/com~apple~CloudDocs/MAFM/强化学习/assignment2new/checkpoints_smoke/checkpoint_000002.pt
+
+Training complete in 7597s. Checkpoint: /Users/shw/Library/Mobile Documents/com~apple~CloudDocs/MAFM/强化学习/assignment2new/checkpoints_smoke/checkpoint_000002.pt

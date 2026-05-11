@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "/Users/shw/Library/Mobile Documents/com~apple~CloudDocs/MAFM/强化学习/assignment2new/src/train.py",
+    "--fast",
+    "--iterations",
+    "2",
+    "--checkpoint-freq",
+    "2",
+    "--plot-every",
+    "2",
+    "--results-dir",
+    "/Users/shw/Library/Mobile Documents/com~apple~CloudDocs/MAFM/强化学习/assignment2new/results_smoke",
+    "--checkpoint-dir",
+    "/Users/shw/Library/Mobile Documents/com~apple~CloudDocs/MAFM/强化学习/assignment2new/checkpoints_smoke"
+  ],
+  "seed": 42,
+  "python": "3.13.5",
+  "platform": "macOS-26.4-arm64-arm-64bit-Mach-O",
+  "torch": "2.9.1",
+  "torchrl": "0.11.1",
+  "git_commit": "937f150",
+  "framework": "torchrl"
+}
