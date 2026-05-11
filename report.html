@@ -1561,6 +1561,21 @@ The final model demonstrates exceptional quantitative performance, easily defeat
 <tr><td><strong>Lookahead Scripted</strong></td><td style="font-weight:bold;color:#059669;">79.2%</td><td style="font-weight:bold;color:#2563eb;">54.2%</td><td>Strong performance even against an opponent that simulates 1-step future states to maximize expected value.</td></tr>
 </table>
 
+<div class="info" style="margin-top:18px">
+<p><strong>Additional Scripted Opponents in Training Pool:</strong> The final training configuration uses a <strong>diverse pool of 10 scripted opponent types</strong> (not just the 5 shown above), each designed to target a specific tactical weakness or behavioural blindspot:
+<ul style="margin-top:8px;line-height:1.6">
+<li><strong>Row Rusher</strong>: Purely aggressive opponent that only tries to build horizontal winning lines — forces the agent to learn defense against horizontal threats.</li>
+<li><strong>Col Rusher</strong>: Purely aggressive opponent that only tries to build vertical winning lines across multiple board levels — this is one of the hardest to defend against, and the agent achieved up to 74.0% win rate against it, proving cross-level topological understanding.</li>
+<li><strong>Center Biased</strong>: Opponent that strongly prefers central positions, testing the agent's ability to control the board from the center.</li>
+<li><strong>Edge Explorer</strong>: Opponent that explores high-risk edge/corner positions, testing the agent's ability to exploit opponent overconfidence in high-forfeit locations.</li>
+<li><strong>Greedy Tactical</strong>: A tactical opponent that scores moves by immediate expected-value, forcing the agent to learn tactical consistency and immediate threat management.</li>
+</ul>
+</p>
+<p style="margin-top:10px">
+This <strong>multi-dimensional opponent pool</strong> is a key design decision: the agent is never allowed to specialize against only random or simple opponents, but must learn comprehensive tactical robustness across all possible playstyles!
+</p>
+</div>
+
 <h3 style="margin-top:24px">16.2 Advanced Capabilities Validation</h3>
 <p>Beyond raw win rates, the metrics validate specific advanced capabilities designed into the environment:</p>
 <ul style="line-height:1.6">
