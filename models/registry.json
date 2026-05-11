@@ -1,0 +1,12 @@
+{
+  "versions": [
+    {
+      "version": "1.0",
+      "path": "v1.0/model_weights.pt",
+      "name": "Baseline (3ch/144-action/128f/6blk)",
+      "architecture": "old",
+      "iterations": 800
+    }
+  ],
+  "latest": "1.0"
+}

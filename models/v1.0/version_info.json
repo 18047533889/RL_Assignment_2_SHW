@@ -1,0 +1,29 @@
+{
+  "version": "1.0",
+  "name": "Baseline (3ch/144-action/128f/6blk)",
+  "description": "Original architecture: 3-channel obs (my, opp, valid), 144-action flat space, 128 filters, 6 res blocks, 512 value hidden. Trained 800 iterations with seed 42.",
+  "architecture": {
+    "obs_channels": 3,
+    "action_space": 144,
+    "num_filters": 128,
+    "num_res_blocks": 6,
+    "value_fc_hidden": 512,
+    "params_approx": "1.9M"
+  },
+  "training": {
+    "iterations": 800,
+    "train_batch_size": 8192,
+    "sgd_minibatch_size": 256,
+    "num_epochs": 6,
+    "seed": 42,
+    "opponent_slots": 5,
+    "curriculum": false,
+    "scripted_opponents": false
+  },
+  "results": {
+    "final_win_rate": 0.644,
+    "final_eval_vs_snapshot": 0.35,
+    "final_eval_vs_random": 1.0,
+    "source_run": "run_20260412_004306"
+  }
+}
